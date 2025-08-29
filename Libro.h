@@ -1,13 +1,17 @@
-class Libro{
+#ifndef LIBRO_H
+#define LIBRO_H
+
+#include<string>
+
+class Book {
 	private:
-		std :: string titulo
-		std :: string autor
-		int anio
+		std :: string title;
+		std :: string author;
+		int year = 0;
 	public:
-		Libro(){}
-		void mostrarInformacion(){
-			std :: cout << "Titulo: " << titulo << endl;
-			 
-		}
-	
-}
+		Book() = default;
+    Book(const std::string& title, const std::string& author, int year);
+		void showInfo();	
+};
+
+#endif // LIBRO_H
